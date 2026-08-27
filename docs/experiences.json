@@ -1,0 +1,242 @@
+[
+  {
+    "filename": "armakuni-aiml-harsh.md",
+    "company": "Armakuni",
+    "role": "AI/ML Engineer",
+    "contributor": "harsh",
+    "year": "2026",
+    "status": "unknown",
+    "rounds": [
+      {
+        "title": "Aptitude Round",
+        "difficulty": "Easy-Medium",
+        "details": "Number system, train speed/distance, clock, calendar, LCM/HCF, work and time, basic SQL, HTML basics, synonyms/antonyms"
+      },
+      {
+        "title": "Practical Round",
+        "difficulty": "Medium",
+        "details": "6 tasks total. Note: only one test case was visible in the browser per problem — you had to infer edge cases from the description.\n1-2. Coding: check subsequences and arrange by lexicographic order; one general easy array question\n3-4. SQL: one on a triple join, one on ranking"
+      },
+      {
+        "title": "Group Discussion",
+        "difficulty": "N/A",
+        "details": ""
+      },
+      {
+        "title": "Technical Round",
+        "difficulty": "Medium-Hard",
+        "details": "Started with basic C/C++, moved into OOP, then a scenario-based data structures question, then deep dive into AI/ML"
+      }
+    ],
+    "rawBody": "## Aptitude Round — Easy-Medium\nNumber system, train speed/distance, clock, calendar, LCM/HCF, work and time, basic SQL, HTML basics, synonyms/antonyms\n\n## Practical Round — Medium\n6 tasks total. Note: only one test case was visible in the browser per problem — you had to infer edge cases from the description.\n1-2. Coding: check subsequences and arrange by lexicographic order; one general easy array question\n3-4. SQL: one on a triple join, one on ranking\n\n## Group Discussion — N/A\n\n## Technical Round — Medium-Hard\nStarted with basic C/C++, moved into OOP, then a scenario-based data structures question, then deep dive into AI/ML"
+  },
+  {
+    "filename": "cyperrox-softwaredev-harsh.md",
+    "company": "Cyperrox",
+    "role": "Software Developer",
+    "contributor": "harsh",
+    "year": "2026",
+    "status": "unknown",
+    "rounds": [
+      {
+        "title": "Aptitude Round",
+        "difficulty": "Easy",
+        "details": "Basic number and percentage questions"
+      },
+      {
+        "title": "Technical Round",
+        "difficulty": "Easy-Medium",
+        "details": "One-on-one, resume-based: basic SQL and React, SQL joins, basic HTML/CSS/JavaScript"
+      },
+      {
+        "title": "HR Round",
+        "difficulty": "N/A",
+        "details": "Self-introduction, questions about the company, \"any questions for us\""
+      }
+    ],
+    "rawBody": "## Aptitude Round — Easy\nBasic number and percentage questions\n\n## Technical Round — Easy-Medium\nOne-on-one, resume-based: basic SQL and React, SQL joins, basic HTML/CSS/JavaScript\n\n## HR Round — N/A\nSelf-introduction, questions about the company, \"any questions for us\""
+  },
+  {
+    "filename": "meditab-qa-harsh.md",
+    "company": "Meditab",
+    "role": "QA",
+    "contributor": "harsh",
+    "year": "2026",
+    "status": "withdrew",
+    "rounds": [
+      {
+        "title": "Aptitude Round",
+        "difficulty": "Medium",
+        "details": "9 different tests: analysis, differentiate between shapes, remember-the-sequence (2 sub-rounds), simple reasoning"
+      },
+      {
+        "title": "Practical Round",
+        "difficulty": "Medium",
+        "details": "6 tasks: writing test cases for different systems (e.g. library system, login system)"
+      },
+      {
+        "title": "HR Round",
+        "difficulty": "N/A",
+        "details": "Introduce yourself, resume-based questions, why this role — interview ended early after candidate declined the role"
+      }
+    ],
+    "rawBody": "## Aptitude Round — Medium\n9 different tests: analysis, differentiate between shapes, remember-the-sequence (2 sub-rounds), simple reasoning\n\n## Practical Round — Medium\n6 tasks: writing test cases for different systems (e.g. library system, login system)\n\n## HR Round — N/A\nIntroduce yourself, resume-based questions, why this role — interview ended early after candidate declined the role"
+  },
+  {
+    "filename": "optimumbrew-backend-harsh.md",
+    "company": "Optimumbrew",
+    "role": "Backend Developer",
+    "contributor": "harsh",
+    "year": "2026",
+    "status": "unknown",
+    "rounds": [
+      {
+        "title": "Aptitude Round",
+        "difficulty": "Easy",
+        "details": "Number system, simple reasoning, work and time, percentage, profit-loss, basic C fundamentals (output/printing)"
+      },
+      {
+        "title": "Technical Round",
+        "difficulty": "Easy-Medium",
+        "details": "1. Implement an insert function for a queue (scenario-based)\n2. Word problem: a \"paper machine\" — one output uses 2 input papers, and 1 paper is wasted after every 2 outputs produced; given total input papers, calculate total output"
+      }
+    ],
+    "rawBody": "## Aptitude Round — Easy\nNumber system, simple reasoning, work and time, percentage, profit-loss, basic C fundamentals (output/printing)\n\n## Technical Round — Easy-Medium\n1. Implement an insert function for a queue (scenario-based)\n2. Word problem: a \"paper machine\" — one output uses 2 input papers, and 1 paper is wasted after every 2 outputs produced; given total input papers, calculate total output"
+  },
+  {
+    "filename": "pinnacleiit-softwareengineer-priyanshu-kumar.md",
+    "company": "Pinnacle IIT",
+    "role": "Software Engineer",
+    "contributor": "priyanshu-kumar",
+    "year": "2026",
+    "status": "selected",
+    "rounds": [
+      {
+        "title": "Aptitude Round",
+        "difficulty": "Easy",
+        "details": "Basic level, plus some HTML/CSS fundamentals"
+      },
+      {
+        "title": "Practical Round",
+        "difficulty": "Medium",
+        "details": "Recreate a given website using AI tools"
+      }
+    ],
+    "rawBody": "## Aptitude Round — Easy\nBasic level, plus some HTML/CSS fundamentals\n\n## Practical Round — Medium\nRecreate a given website using AI tools"
+  },
+  {
+    "filename": "shipturtle-backend-harsh.md",
+    "company": "ShipTurtle",
+    "role": "Backend Developer",
+    "contributor": "harsh",
+    "year": "2026",
+    "status": "unknown",
+    "rounds": [
+      {
+        "title": "Technical Round (direct, no aptitude)",
+        "difficulty": "Medium",
+        "details": "Frontend-leaning for a backend role: given a React code snippet using state, asked to find the bug and fix it; asked to trace render flow (would it print or not, and why); basic SQL queries"
+      }
+    ],
+    "rawBody": "## Technical Round (direct, no aptitude) — Medium\nFrontend-leaning for a backend role: given a React code snippet using state, asked to find the bug and fix it; asked to trace render flow (would it print or not, and why); basic SQL queries"
+  },
+  {
+    "filename": "simform-aiml-harsh.md",
+    "company": "Simform",
+    "role": "AI/ML Developer",
+    "contributor": "harsh",
+    "year": "2026",
+    "status": "selected",
+    "rounds": [
+      {
+        "title": "Aptitude Round",
+        "difficulty": "Easy",
+        "details": "Reasoning-level (series completion, etc.), plus some technical questions on time complexity (e.g. complexity of graph traversal)"
+      },
+      {
+        "title": "Practical Round",
+        "difficulty": "Easy-Medium",
+        "details": "3 questions: palindrome check, print area of a circle, and two problem-solving array questions (no heavy coding required)"
+      },
+      {
+        "title": "Technical Round",
+        "difficulty": "Medium",
+        "details": "Started with self-introduction, went deep into ML fundamentals: supervised vs unsupervised learning, deep learning, generative AI, why this role"
+      },
+      {
+        "title": "HR / Culture Fit Round",
+        "difficulty": "N/A",
+        "details": "Self-introduction, about the company, scenario-based (e.g. handling too many tasks, communicating with a client)"
+      }
+    ],
+    "rawBody": "## Aptitude Round — Easy\nReasoning-level (series completion, etc.), plus some technical questions on time complexity (e.g. complexity of graph traversal)\n\n## Practical Round — Easy-Medium\n3 questions: palindrome check, print area of a circle, and two problem-solving array questions (no heavy coding required)\n\n## Technical Round — Medium\nStarted with self-introduction, went deep into ML fundamentals: supervised vs unsupervised learning, deep learning, generative AI, why this role\n\n## HR / Culture Fit Round — N/A\nSelf-introduction, about the company, scenario-based (e.g. handling too many tasks, communicating with a client)"
+  },
+  {
+    "filename": "streebo-backend-harsh.md",
+    "company": "Streebo",
+    "role": "Backend Developer",
+    "contributor": "harsh",
+    "year": "2026",
+    "status": "unknown",
+    "rounds": [
+      {
+        "title": "Aptitude Round",
+        "difficulty": "Medium",
+        "details": "3 parts: (1) quant aptitude — number system, work and time, percentage; (2) reasoning; (3) data interpretation"
+      },
+      {
+        "title": "Technical Round",
+        "difficulty": "Easy-Medium",
+        "details": "Palindrome check, basic OOP fundamentals, basic C, self-introduction"
+      }
+    ],
+    "rawBody": "## Aptitude Round — Medium\n3 parts: (1) quant aptitude — number system, work and time, percentage; (2) reasoning; (3) data interpretation\n\n## Technical Round — Easy-Medium\nPalindrome check, basic OOP fundamentals, basic C, self-introduction"
+  },
+  {
+    "filename": "synoverge-juniorswdev-harsh.md",
+    "company": "Synoverge",
+    "role": "Junior Software Developer",
+    "contributor": "harsh",
+    "year": "2026",
+    "status": "unknown",
+    "rounds": [
+      {
+        "title": "Aptitude Round",
+        "difficulty": "Easy-Medium",
+        "details": "Simple aptitude, medium reasoning, data interpretation"
+      },
+      {
+        "title": "Technical Round",
+        "difficulty": "N/A",
+        "details": "[details not captured — add if you recall anything specific]"
+      },
+      {
+        "title": "Essay Writing Round",
+        "difficulty": "N/A",
+        "details": "One essay writing question [topic not specified]"
+      }
+    ],
+    "rawBody": "## Aptitude Round — Easy-Medium\nSimple aptitude, medium reasoning, data interpretation\n\n## Technical Round — N/A\n[details not captured — add if you recall anything specific]\n\n## Essay Writing Round — N/A\nOne essay writing question [topic not specified]"
+  },
+  {
+    "filename": "tcs-backend-nehang.md",
+    "company": "TCS",
+    "role": "Backend Developer",
+    "contributor": "nehang",
+    "year": "2026",
+    "status": "unknown",
+    "rounds": [
+      {
+        "title": "Aptitude Round",
+        "difficulty": "Medium",
+        "details": "Quants: work and time, train and distance, number system, percentage, profit-loss\nAdvanced quants: reasoning, clock, directions, seating arrangement, calendar\nEnglish: sentence simplification, synonyms/antonyms\nEssay writing\nCoding: water trapping problem"
+      },
+      {
+        "title": "Technical Round",
+        "difficulty": "Medium",
+        "details": "Three separate interviewer tracks:\n- Ninja track (Python-native): merge two lists, self-introduction, basic OOP\n- Digital track: OOP concepts, then data structures\n- Prime track: resume-based, articulation/communication-focused"
+      }
+    ],
+    "rawBody": "## Aptitude Round — Medium\nQuants: work and time, train and distance, number system, percentage, profit-loss\nAdvanced quants: reasoning, clock, directions, seating arrangement, calendar\nEnglish: sentence simplification, synonyms/antonyms\nEssay writing\nCoding: water trapping problem\n\n## Technical Round — Medium\nThree separate interviewer tracks:\n- Ninja track (Python-native): merge two lists, self-introduction, basic OOP\n- Digital track: OOP concepts, then data structures\n- Prime track: resume-based, articulation/communication-focused"
+  }
+]

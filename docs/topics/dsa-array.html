@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dsa-array Interview Questions | MU_INTERVIEWS</title>
+  <meta name="description" content="Campus interview questions on dsa-array at Marwadi University." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            slate: {
+              850: '#111827',
+              900: '#0b0f19',
+              950: '#060911',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #07090e;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
+      letter-spacing: -0.01em;
+    }
+    .glass-panel {
+      background: rgba(13, 17, 28, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.3);
+    }
+    .glass-card {
+      background: rgba(15, 21, 37, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      background: rgba(20, 28, 48, 0.8);
+      border-color: rgba(52, 211, 153, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.15);
+    }
+    .glow-header {
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.18), transparent 70%);
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #07090e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col text-slate-100 selection:bg-emerald-500 selection:text-slate-950">
+  <!-- Top Radial Ambient Glow -->
+  <div class="fixed top-0 left-0 right-0 h-[480px] glow-header pointer-events-none -z-10"></div>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 border-b border-white/[0.08] bg-[#07090e]/80 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="../index.html" class="flex items-center gap-2.5 group">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center font-black text-[#07090e] text-xs shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+            MU
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-sm sm:text-base tracking-tight text-white group-hover:text-emerald-400 transition-colors">MU_INTERVIEWS</span>
+            <span class="text-[10px] font-mono text-emerald-400 px-1.5 py-0.5 rounded bg-emerald-950/80 border border-emerald-800/80 hidden sm:inline-block">v1.0</span>
+          </div>
+        </a>
+
+        <!-- Desktop Quick Links -->
+        <nav class="hidden md:flex items-center gap-1 text-xs font-medium text-slate-400">
+          <a href="../index.html" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-white/5 transition-all">All Archives</a>
+          <a href="../index.html#insights" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-white/5 transition-all">Interactive Insights</a>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/issues/new/choose" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-500 hover:bg-emerald-400 text-[#07090e] transition-all shadow-sm shadow-emerald-500/20 active:scale-95">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          <span>Submit Experience</span>
+        </a>
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-white/10 transition-all">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span class="hidden sm:inline">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="flex-1">
+    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6">
+        <a href="../index.html" class="hover:text-emerald-400 transition-colors">Home</a>
+        <span>/</span>
+        <span>Topics</span>
+        <span>/</span>
+        <span class="text-white font-medium">#dsa-array</span>
+      </nav>
+
+      <!-- Banner -->
+      <div class="glass-panel p-6 sm:p-8 rounded-2xl mb-8">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-950 text-amber-300 text-xs font-semibold border border-amber-800/80 mb-2 font-mono">
+          #dsa-array
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Topic: dsa array</h1>
+        <p class="text-xs sm:text-sm text-slate-400 mt-1">Companies asking about this topic during on-campus recruitment</p>
+
+        <!-- Topic Bar Chart -->
+        <div class="mt-6 pt-6 border-t border-white/[0.08]">
+          <h3 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Companies That Tested This Topic</h3>
+          <div class="relative h-56 sm:h-64 w-full">
+            <canvas id="topicCompanyChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question and Round Occurrences -->
+      <h2 class="text-lg font-bold text-white mb-4">Questions & Round References (2)</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+          <div class="glass-card rounded-2xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div>
+                  <a href="../companies/armakuni.html" class="text-base font-bold text-white hover:text-emerald-400">Armakuni</a>
+                  <div class="text-xs text-emerald-400 font-medium">Practical Round</div>
+                </div>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Medium</span>
+              </div>
+
+              <div class="bg-slate-900/80 rounded-xl p-3.5 border border-white/5 text-xs text-slate-300 leading-relaxed">
+                6 tasks total. Note: only one test case was visible in the browser per problem — you had to infer edge cases from the description.<br/>1-2. Coding: check subsequences and arrange by lexicographic order; one general easy array question<br/>3-4. SQL: one on a triple join, one on ranking
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-white/[0.06] flex items-center justify-between text-[11px] text-slate-500">
+              <span>Contributor: @harsh</span>
+              <a href="../companies/armakuni.html" class="text-emerald-400 hover:text-emerald-300">View Experience →</a>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div>
+                  <a href="../companies/simform.html" class="text-base font-bold text-white hover:text-emerald-400">Simform</a>
+                  <div class="text-xs text-emerald-400 font-medium">Practical Round</div>
+                </div>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Easy-Medium</span>
+              </div>
+
+              <div class="bg-slate-900/80 rounded-xl p-3.5 border border-white/5 text-xs text-slate-300 leading-relaxed">
+                3 questions: palindrome check, print area of a circle, and two problem-solving array questions (no heavy coding required)
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-white/[0.06] flex items-center justify-between text-[11px] text-slate-500">
+              <span>Contributor: @harsh</span>
+              <a href="../companies/simform.html" class="text-emerald-400 hover:text-emerald-300">View Experience →</a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const ctx = document.getElementById('topicCompanyChart');
+        if (ctx) {
+          const compData = {"Armakuni":1,"Simform":1};
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: Object.keys(compData).length ? Object.keys(compData) : ['None yet'],
+              datasets: [{
+                label: 'Questions Asked',
+                data: Object.values(compData).length ? Object.values(compData) : [0],
+                backgroundColor: 'rgba(245, 158, 11, 0.75)',
+                borderColor: '#f59e0b',
+                borderWidth: 1,
+                borderRadius: 6
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: { legend: { display: false } },
+              scales: {
+                x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
+                y: { ticks: { color: '#94a3b8', stepSize: 1, font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.05)' } }
+              }
+            }
+          });
+        }
+      });
+    </script>
+    
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/[0.08] bg-[#05070a] py-12 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-4">
+      <div class="flex items-center justify-center gap-2">
+        <div class="w-5 h-5 rounded bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px]">MU</div>
+        <span class="font-semibold text-slate-300">Marwadi University On-Campus Placement Archive</span>
+      </div>
+      <p class="text-slate-400 max-w-lg mx-auto leading-relaxed">
+        Built by students for students. First-hand on-campus interview questions, patterns, and tips.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-slate-400 pt-2 font-medium">
+        <a href="../index.html" class="hover:text-emerald-400 transition-colors">Home</a>
+        <span>•</span>
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-" class="hover:text-emerald-400 transition-colors">Repository</a>
+        <span>•</span>
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/CONTRIBUTING.md" class="hover:text-emerald-400 transition-colors">Submit Experience</a>
+        <span>•</span>
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/taxonomy.md" class="hover:text-emerald-400 transition-colors">Canonical Taxonomy</a>
+        <span>•</span>
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/LICENSE" class="hover:text-emerald-400 transition-colors">MIT License</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

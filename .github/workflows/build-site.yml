@@ -1,0 +1,49 @@
+name: Build Static Site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'experiences/**'
+      - 'taxonomy.md'
+      - 'scripts/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'experiences/**'
+      - 'taxonomy.md'
+      - 'scripts/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Strict Validation & Build Static Site
+        run: node scripts/build-site.js
+
+      - name: Commit & Push Regenerated Docs
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          if git diff --staged --quiet; then
+            echo "No changes in docs/ to commit."
+          else
+            git commit -m "chore(docs): rebuild static site and charts [skip ci]"
+            git push
+          fi

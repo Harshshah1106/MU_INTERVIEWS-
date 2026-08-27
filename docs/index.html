@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MU_INTERVIEWS — On-Campus Placement Archive | MU_INTERVIEWS</title>
+  <meta name="description" content="Archive of real on-campus interview questions, tests, and tips from Marwadi University." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            slate: {
+              850: '#111827',
+              900: '#0b0f19',
+              950: '#060911',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #07090e;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
+      letter-spacing: -0.01em;
+    }
+    .glass-panel {
+      background: rgba(13, 17, 28, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.3);
+    }
+    .glass-card {
+      background: rgba(15, 21, 37, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      background: rgba(20, 28, 48, 0.8);
+      border-color: rgba(52, 211, 153, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.15);
+    }
+    .glow-header {
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.18), transparent 70%);
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #07090e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col text-slate-100 selection:bg-emerald-500 selection:text-slate-950">
+  <!-- Top Radial Ambient Glow -->
+  <div class="fixed top-0 left-0 right-0 h-[480px] glow-header pointer-events-none -z-10"></div>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 border-b border-white/[0.08] bg-[#07090e]/80 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center font-black text-[#07090e] text-xs shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+            MU
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-sm sm:text-base tracking-tight text-white group-hover:text-emerald-400 transition-colors">MU_INTERVIEWS</span>
+            <span class="text-[10px] font-mono text-emerald-400 px-1.5 py-0.5 rounded bg-emerald-950/80 border border-emerald-800/80 hidden sm:inline-block">v1.0</span>
+          </div>
+        </a>
+
+        <!-- Desktop Quick Links -->
+        <nav class="hidden md:flex items-center gap-1 text-xs font-medium text-slate-400">
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-white bg-white/10 transition-all">All Archives</a>
+          <a href="index.html#insights" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-white/5 transition-all">Interactive Insights</a>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/issues/new/choose" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-500 hover:bg-emerald-400 text-[#07090e] transition-all shadow-sm shadow-emerald-500/20 active:scale-95">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"></path></svg>
+          <span>Submit Experience</span>
+        </a>
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-white/10 transition-all">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span class="hidden sm:inline">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="flex-1">
+    
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-8 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-white/10 text-xs text-slate-300 mb-6 shadow-sm">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      Marwadi University • On-Campus Interview Vault
+    </div>
+    
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4">
+      Real On-Campus <br class="hidden sm:inline"/>
+      <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">Interview Experiences</span>
+    </h1>
+    <p class="max-w-2xl mx-auto text-sm sm:text-base text-slate-400 mb-10 leading-relaxed font-normal">
+      High-yield archive of actual aptitude questions, technical rounds, coding tasks, and HR interviews experienced by Marwadi University students.
+    </p>
+
+    <!-- Top Key Metrics Strip -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-4 max-w-4xl mx-auto mb-12">
+      <div class="glass-panel p-4 sm:p-5 rounded-2xl text-center">
+        <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">10</div>
+        <div class="text-xs text-slate-400 font-medium mt-1">Experiences</div>
+      </div>
+      <div class="glass-panel p-4 sm:p-5 rounded-2xl text-center">
+        <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400 tracking-tight">10</div>
+        <div class="text-xs text-slate-400 font-medium mt-1">Companies</div>
+      </div>
+      <div class="glass-panel p-4 sm:p-5 rounded-2xl text-center">
+        <div class="text-3xl sm:text-4xl font-extrabold text-teal-300 tracking-tight">26</div>
+        <div class="text-xs text-slate-400 font-medium mt-1">Documented Rounds</div>
+      </div>
+      <div class="glass-panel p-4 sm:p-5 rounded-2xl text-center">
+        <div class="text-3xl sm:text-4xl font-extrabold text-cyan-400 tracking-tight">31</div>
+        <div class="text-xs text-slate-400 font-medium mt-1">Tagged Topics</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Charts Section -->
+  <section id="insights" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <div class="flex items-center justify-between mb-4">
+      <div>
+        <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">Recruitment Insights</h2>
+        <p class="text-xs text-slate-400">Interactive live breakdown based on current submissions</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Bar Chart: Experiences per Company -->
+      <div class="glass-panel p-5 rounded-2xl lg:col-span-2 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Submissions by Company</h3>
+          <span class="text-[11px] font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60">Live Breakdown</span>
+        </div>
+        <div class="relative h-64 sm:h-72 w-full">
+          <canvas id="companyBarChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Donut Chart: Round Types Distribution -->
+      <div class="glass-panel p-5 rounded-2xl flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Round Type Distribution</h3>
+          <span class="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/60">26 Rounds</span>
+        </div>
+        <div class="relative h-64 sm:h-72 w-full flex items-center justify-center">
+          <canvas id="roundDonutChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Search Command Bar -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
+    <div class="glass-panel p-5 rounded-2xl space-y-4">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <!-- Main Text Search -->
+        <div class="relative flex-1">
+          <input type="text" id="liveSearchInput" placeholder="Search questions, companies, topics (e.g. SQL, React, Simform, TCS)..." 
+                 class="w-full px-4 py-3 pl-11 rounded-xl bg-slate-900/90 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all shadow-inner" />
+          <svg class="w-4 h-4 absolute left-3.5 top-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+
+        <!-- Filter Selects -->
+        <div class="grid grid-cols-2 sm:flex gap-2">
+          <!-- Company Filter -->
+          <select id="filterCompanySelect" class="px-3 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-xs text-slate-300 focus:outline-none focus:border-emerald-500">
+            <option value="all">All Companies (10)</option>
+            <option value="armakuni">Armakuni</option><option value="cyperrox">Cyperrox</option><option value="meditab">Meditab</option><option value="optimumbrew">Optimumbrew</option><option value="pinnacle-iit">Pinnacle IIT</option><option value="shipturtle">ShipTurtle</option><option value="simform">Simform</option><option value="streebo">Streebo</option><option value="synoverge">Synoverge</option><option value="tcs">TCS</option>
+          </select>
+
+          <!-- Role Filter -->
+          <select id="filterRoleSelect" class="px-3 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-xs text-slate-300 focus:outline-none focus:border-emerald-500">
+            <option value="all">All Roles (7)</option>
+            <option value="aiml-developer">AI/ML Developer</option><option value="aiml-engineer">AI/ML Engineer</option><option value="backend-developer">Backend Developer</option><option value="junior-software-developer">Junior Software Developer</option><option value="qa">QA</option><option value="software-developer">Software Developer</option><option value="software-engineer">Software Engineer</option>
+          </select>
+
+          <!-- Difficulty Filter -->
+          <select id="filterDiffSelect" class="px-3 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-xs text-slate-300 focus:outline-none focus:border-emerald-500">
+            <option value="all">All Difficulties</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+
+          <!-- Topic Filter -->
+          <select id="filterTopicSelect" class="px-3 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-xs text-slate-300 focus:outline-none focus:border-emerald-500">
+            <option value="all">All Topics (31)</option>
+            <option value="c-fundamentals">c-fundamentals</option><option value="calendar">calendar</option><option value="clock">clock</option><option value="data-interpretation">data-interpretation</option><option value="deep-learning">deep-learning</option><option value="directions">directions</option><option value="dsa-array">dsa-array</option><option value="dsa-queue">dsa-queue</option><option value="english-synonyms-antonyms">english-synonyms-antonyms</option><option value="essay-writing">essay-writing</option><option value="generative-ai">generative-ai</option><option value="group-discussion">group-discussion</option><option value="hr-scenario-based">hr-scenario-based</option><option value="javascript">javascript</option><option value="lcm-hcf">lcm-hcf</option><option value="number-system">number-system</option><option value="oop-concepts">oop-concepts</option><option value="palindrome">palindrome</option><option value="percentage">percentage</option><option value="profit-loss">profit-loss</option><option value="react">react</option><option value="reasoning">reasoning</option><option value="resume-based">resume-based</option><option value="seating-arrangement">seating-arrangement</option><option value="sql-joins">sql-joins</option><option value="sql-queries">sql-queries</option><option value="sql-ranking">sql-ranking</option><option value="supervised-unsupervised-learning">supervised-unsupervised-learning</option><option value="time-complexity">time-complexity</option><option value="train-speed-distance">train-speed-distance</option><option value="work-and-time">work-and-time</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Quick Topic Chips -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs no-scrollbar">
+        <span class="text-slate-500 shrink-0 text-[11px] font-medium uppercase tracking-wider">Top Topics:</span>
+        
+          <button onclick="setTopicFilter('c-fundamentals')" class="topic-pill shrink-0 px-2.5 py-1 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-white/5 text-[11px] font-mono transition-colors">
+            #c-fundamentals
+          </button>
+        
+          <button onclick="setTopicFilter('calendar')" class="topic-pill shrink-0 px-2.5 py-1 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-white/5 text-[11px] font-mono transition-colors">
+            #calendar
+          </button>
+        
+          <button onclick="setTopicFilter('clock')" class="topic-pill shrink-0 px-2.5 py-1 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-white/5 text-[11px] font-mono transition-colors">
+            #clock
+          </button>
+        
+          <button onclick="setTopicFilter('data-interpretation')" class="topic-pill shrink-0 px-2.5 py-1 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-white/5 text-[11px] font-mono transition-colors">
+            #data-interpretation
+          </button>
+        
+          <button onclick="setTopicFilter('deep-learning')" class="topic-pill shrink-0 px-2.5 py-1 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-white/5 text-[11px] font-mono transition-colors">
+            #deep-learning
+          </button>
+        
+          <button onclick="setTopicFilter('directions')" class="topic-pill shrink-0 px-2.5 py-1 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-white/5 text-[11px] font-mono transition-colors">
+            #directions
+          </button>
+        
+          <button onclick="setTopicFilter('dsa-array')" class="topic-pill shrink-0 px-2.5 py-1 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-white/5 text-[11px] font-mono transition-colors">
+            #dsa-array
+          </button>
+        
+          <button onclick="setTopicFilter('dsa-queue')" class="topic-pill shrink-0 px-2.5 py-1 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-white/5 text-[11px] font-mono transition-colors">
+            #dsa-queue
+          </button>
+        
+          <button onclick="setTopicFilter('english-synonyms-antonyms')" class="topic-pill shrink-0 px-2.5 py-1 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-white/5 text-[11px] font-mono transition-colors">
+            #english-synonyms-antonyms
+          </button>
+        
+          <button onclick="setTopicFilter('essay-writing')" class="topic-pill shrink-0 px-2.5 py-1 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-white/5 text-[11px] font-mono transition-colors">
+            #essay-writing
+          </button>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Experiences Feed -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-20">
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-2">
+        <h2 class="text-lg font-bold text-white tracking-tight">Interview Archives</h2>
+        <span id="resultsBadge" class="text-xs font-mono text-slate-400 bg-slate-900 px-2.5 py-0.5 rounded-full border border-white/10">
+          Showing 10 of 10
+        </span>
+      </div>
+      <button onclick="resetFilters()" id="resetBtn" class="text-xs text-slate-500 hover:text-slate-300 hidden transition-colors">
+        Clear filters ✕
+      </button>
+    </div>
+
+    <!-- Experiences Grid -->
+    <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card"
+                 data-company-slug="armakuni"
+                 data-role-slug="aiml-engineer"
+                 data-difficulties="medium medium n/a hard"
+                 data-topics="number-system work-and-time clock calendar train-speed-distance lcm-hcf english-synonyms-antonyms sql-queries dsa-array sql-joins sql-ranking group-discussion c-fundamentals oop-concepts hr-scenario-based"
+                 data-search="armakuni ai/ml engineer harsh ## aptitude round — easy-medium
+number system, train speed/distance, clock, calendar, lcm/hcf, work and time, basic sql, html basics, synonyms/antonyms
+
+## practical round — medium
+6 tasks total. note: only one test case was visible in the browser per problem — you had to infer edge cases from the description.
+1-2. coding: check subsequences and arrange by lexicographic order; one general easy array question
+3-4. sql: one on a triple join, one on ranking
+
+## group discussion — n/a
+
+## technical round — medium-hard
+started with basic c/c++, moved into oop, then a scenario-based data structures question, then deep dive into ai/ml number-system work-and-time clock calendar train-speed-distance lcm-hcf english-synonyms-antonyms sql-queries dsa-array sql-joins sql-ranking group-discussion c-fundamentals oop-concepts hr-scenario-based">
+          <div>
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <a href="companies/armakuni.html" class="group/title flex items-center gap-1.5">
+                  <h3 class="text-xl font-bold text-white tracking-tight group-hover/title:text-emerald-400 transition-colors">Armakuni</h3>
+                  <svg class="w-4 h-4 text-slate-500 opacity-0 group-hover/title:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                <div class="text-xs sm:text-sm font-medium text-emerald-400 mt-0.5">AI/ML Engineer</div>
+              </div>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 border border-slate-700">Status: Unknown</span>
+                <span class="text-[11px] text-slate-500 font-mono">Batch 2026</span>
+              </div>
+            </div>
+
+            <!-- Contributor & Metadata -->
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06]">
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                @harsh
+              </span>
+              <span>•</span>
+              <span class="text-slate-400">4 Rounds</span>
+            </div>
+
+            <!-- Round Cards Breakdown -->
+            <div class="space-y-3.5">
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/aptitude-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Aptitude Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Easy-Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Number system, train speed/distance, clock, calendar, LCM/HCF, work and time, basic SQL, HTML basics, synonyms/antonyms
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/number-system.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #number-system
+                        </a>
+                      
+                        <a href="topics/work-and-time.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #work-and-time
+                        </a>
+                      
+                        <a href="topics/clock.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #clock
+                        </a>
+                      
+                        <a href="topics/calendar.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #calendar
+                        </a>
+                      
+                        <a href="topics/train-speed-distance.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #train-speed-distance
+                        </a>
+                      
+                        <a href="topics/lcm-hcf.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #lcm-hcf
+                        </a>
+                      
+                        <a href="topics/english-synonyms-antonyms.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #english-synonyms-antonyms
+                        </a>
+                      
+                        <a href="topics/sql-queries.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #sql-queries
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/practical-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Practical Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    6 tasks total. Note: only one test case was visible in the browser per problem — you had to infer edge cases from the description.<br/>1-2. Coding: check subsequences and arrange by lexicographic order; one general easy array question<br/>3-4. SQL: one on a triple join, one on ranking
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/dsa-array.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #dsa-array
+                        </a>
+                      
+                        <a href="topics/sql-joins.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #sql-joins
+                        </a>
+                      
+                        <a href="topics/sql-ranking.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #sql-ranking
+                        </a>
+                      
+                        <a href="topics/sql-queries.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #sql-queries
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/group-discussion.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Group Discussion
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">N/A</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/group-discussion.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #group-discussion
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/technical-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Technical Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-rose-950/80 text-rose-300 border border-rose-800/80">Medium-Hard</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Started with basic C/C++, moved into OOP, then a scenario-based data structures question, then deep dive into AI/ML
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/c-fundamentals.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #c-fundamentals
+                        </a>
+                      
+                        <a href="topics/oop-concepts.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #oop-concepts
+                        </a>
+                      
+                        <a href="topics/hr-scenario-based.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #hr-scenario-based
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500">
+            <span class="font-mono text-[11px] text-slate-500 truncate max-w-[200px]">armakuni-aiml-harsh.md</span>
+            <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/experiences/armakuni-aiml-harsh.md" target="_blank" rel="noopener noreferrer" 
+               class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+              <span>View Source</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+        
+        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card"
+                 data-company-slug="cyperrox"
+                 data-role-slug="software-developer"
+                 data-difficulties="easy medium n/a"
+                 data-topics="number-system percentage sql-joins sql-queries javascript react resume-based"
+                 data-search="cyperrox software developer harsh ## aptitude round — easy
+basic number and percentage questions
+
+## technical round — easy-medium
+one-on-one, resume-based: basic sql and react, sql joins, basic html/css/javascript
+
+## hr round — n/a
+self-introduction, questions about the company, &quot;any questions for us&quot; number-system percentage sql-joins sql-queries javascript react resume-based">
+          <div>
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <a href="companies/cyperrox.html" class="group/title flex items-center gap-1.5">
+                  <h3 class="text-xl font-bold text-white tracking-tight group-hover/title:text-emerald-400 transition-colors">Cyperrox</h3>
+                  <svg class="w-4 h-4 text-slate-500 opacity-0 group-hover/title:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                <div class="text-xs sm:text-sm font-medium text-emerald-400 mt-0.5">Software Developer</div>
+              </div>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 border border-slate-700">Status: Unknown</span>
+                <span class="text-[11px] text-slate-500 font-mono">Batch 2026</span>
+              </div>
+            </div>
+
+            <!-- Contributor & Metadata -->
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06]">
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                @harsh
+              </span>
+              <span>•</span>
+              <span class="text-slate-400">3 Rounds</span>
+            </div>
+
+            <!-- Round Cards Breakdown -->
+            <div class="space-y-3.5">
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/aptitude-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Aptitude Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-950/80 text-emerald-300 border border-emerald-800/80">Easy</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Basic number and percentage questions
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/number-system.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #number-system
+                        </a>
+                      
+                        <a href="topics/percentage.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #percentage
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/technical-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Technical Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Easy-Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    One-on-one, resume-based: basic SQL and React, SQL joins, basic HTML/CSS/JavaScript
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/sql-joins.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #sql-joins
+                        </a>
+                      
+                        <a href="topics/sql-queries.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #sql-queries
+                        </a>
+                      
+                        <a href="topics/javascript.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #javascript
+                        </a>
+                      
+                        <a href="topics/react.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #react
+                        </a>
+                      
+                        <a href="topics/resume-based.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #resume-based
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/hr-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      HR Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">N/A</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Self-introduction, questions about the company, "any questions for us"
+                  </div>
+                  
+                </div>
+              
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500">
+            <span class="font-mono text-[11px] text-slate-500 truncate max-w-[200px]">cyperrox-softwaredev-harsh.md</span>
+            <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/experiences/cyperrox-softwaredev-harsh.md" target="_blank" rel="noopener noreferrer" 
+               class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+              <span>View Source</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+        
+        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card"
+                 data-company-slug="meditab"
+                 data-role-slug="qa"
+                 data-difficulties="medium medium n/a"
+                 data-topics="reasoning resume-based"
+                 data-search="meditab qa harsh ## aptitude round — medium
+9 different tests: analysis, differentiate between shapes, remember-the-sequence (2 sub-rounds), simple reasoning
+
+## practical round — medium
+6 tasks: writing test cases for different systems (e.g. library system, login system)
+
+## hr round — n/a
+introduce yourself, resume-based questions, why this role — interview ended early after candidate declined the role reasoning resume-based">
+          <div>
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <a href="companies/meditab.html" class="group/title flex items-center gap-1.5">
+                  <h3 class="text-xl font-bold text-white tracking-tight group-hover/title:text-emerald-400 transition-colors">Meditab</h3>
+                  <svg class="w-4 h-4 text-slate-500 opacity-0 group-hover/title:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                <div class="text-xs sm:text-sm font-medium text-emerald-400 mt-0.5">QA</div>
+              </div>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-950 text-amber-300 border border-amber-800"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Withdrew</span>
+                <span class="text-[11px] text-slate-500 font-mono">Batch 2026</span>
+              </div>
+            </div>
+
+            <!-- Contributor & Metadata -->
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06]">
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                @harsh
+              </span>
+              <span>•</span>
+              <span class="text-slate-400">3 Rounds</span>
+            </div>
+
+            <!-- Round Cards Breakdown -->
+            <div class="space-y-3.5">
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/aptitude-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Aptitude Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    9 different tests: analysis, differentiate between shapes, remember-the-sequence (2 sub-rounds), simple reasoning
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/reasoning.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #reasoning
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/practical-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Practical Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    6 tasks: writing test cases for different systems (e.g. library system, login system)
+                  </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/hr-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      HR Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">N/A</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Introduce yourself, resume-based questions, why this role — interview ended early after candidate declined the role
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/resume-based.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #resume-based
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500">
+            <span class="font-mono text-[11px] text-slate-500 truncate max-w-[200px]">meditab-qa-harsh.md</span>
+            <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/experiences/meditab-qa-harsh.md" target="_blank" rel="noopener noreferrer" 
+               class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+              <span>View Source</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+        
+        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card"
+                 data-company-slug="optimumbrew"
+                 data-role-slug="backend-developer"
+                 data-difficulties="easy medium"
+                 data-topics="number-system work-and-time percentage profit-loss reasoning c-fundamentals dsa-queue hr-scenario-based"
+                 data-search="optimumbrew backend developer harsh ## aptitude round — easy
+number system, simple reasoning, work and time, percentage, profit-loss, basic c fundamentals (output/printing)
+
+## technical round — easy-medium
+1. implement an insert function for a queue (scenario-based)
+2. word problem: a &quot;paper machine&quot; — one output uses 2 input papers, and 1 paper is wasted after every 2 outputs produced; given total input papers, calculate total output number-system work-and-time percentage profit-loss reasoning c-fundamentals dsa-queue hr-scenario-based">
+          <div>
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <a href="companies/optimumbrew.html" class="group/title flex items-center gap-1.5">
+                  <h3 class="text-xl font-bold text-white tracking-tight group-hover/title:text-emerald-400 transition-colors">Optimumbrew</h3>
+                  <svg class="w-4 h-4 text-slate-500 opacity-0 group-hover/title:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                <div class="text-xs sm:text-sm font-medium text-emerald-400 mt-0.5">Backend Developer</div>
+              </div>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 border border-slate-700">Status: Unknown</span>
+                <span class="text-[11px] text-slate-500 font-mono">Batch 2026</span>
+              </div>
+            </div>
+
+            <!-- Contributor & Metadata -->
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06]">
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                @harsh
+              </span>
+              <span>•</span>
+              <span class="text-slate-400">2 Rounds</span>
+            </div>
+
+            <!-- Round Cards Breakdown -->
+            <div class="space-y-3.5">
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/aptitude-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Aptitude Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-950/80 text-emerald-300 border border-emerald-800/80">Easy</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Number system, simple reasoning, work and time, percentage, profit-loss, basic C fundamentals (output/printing)
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/number-system.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #number-system
+                        </a>
+                      
+                        <a href="topics/work-and-time.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #work-and-time
+                        </a>
+                      
+                        <a href="topics/percentage.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #percentage
+                        </a>
+                      
+                        <a href="topics/profit-loss.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #profit-loss
+                        </a>
+                      
+                        <a href="topics/reasoning.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #reasoning
+                        </a>
+                      
+                        <a href="topics/c-fundamentals.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #c-fundamentals
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/technical-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Technical Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Easy-Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    <li class="ml-4 list-decimal text-slate-300 text-xs sm:text-sm mb-1 leading-relaxed">Implement an insert function for a queue (scenario-based)</li><br/><li class="ml-4 list-decimal text-slate-300 text-xs sm:text-sm mb-1 leading-relaxed">Word problem: a "paper machine" — one output uses 2 input papers, and 1 paper is wasted after every 2 outputs produced; given total input papers, calculate total output</li>
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/dsa-queue.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #dsa-queue
+                        </a>
+                      
+                        <a href="topics/hr-scenario-based.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #hr-scenario-based
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500">
+            <span class="font-mono text-[11px] text-slate-500 truncate max-w-[200px]">optimumbrew-backend-harsh.md</span>
+            <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/experiences/optimumbrew-backend-harsh.md" target="_blank" rel="noopener noreferrer" 
+               class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+              <span>View Source</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+        
+        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card"
+                 data-company-slug="pinnacle-iit"
+                 data-role-slug="software-engineer"
+                 data-difficulties="easy medium"
+                 data-topics="generative-ai"
+                 data-search="pinnacle iit software engineer priyanshu-kumar ## aptitude round — easy
+basic level, plus some html/css fundamentals
+
+## practical round — medium
+recreate a given website using ai tools generative-ai">
+          <div>
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <a href="companies/pinnacle-iit.html" class="group/title flex items-center gap-1.5">
+                  <h3 class="text-xl font-bold text-white tracking-tight group-hover/title:text-emerald-400 transition-colors">Pinnacle IIT</h3>
+                  <svg class="w-4 h-4 text-slate-500 opacity-0 group-hover/title:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                <div class="text-xs sm:text-sm font-medium text-emerald-400 mt-0.5">Software Engineer</div>
+              </div>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-300 border border-emerald-800"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Selected</span>
+                <span class="text-[11px] text-slate-500 font-mono">Batch 2026</span>
+              </div>
+            </div>
+
+            <!-- Contributor & Metadata -->
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06]">
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                @priyanshu-kumar
+              </span>
+              <span>•</span>
+              <span class="text-slate-400">2 Rounds</span>
+            </div>
+
+            <!-- Round Cards Breakdown -->
+            <div class="space-y-3.5">
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/aptitude-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Aptitude Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-950/80 text-emerald-300 border border-emerald-800/80">Easy</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Basic level, plus some HTML/CSS fundamentals
+                  </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/practical-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Practical Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Recreate a given website using AI tools
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/generative-ai.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #generative-ai
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500">
+            <span class="font-mono text-[11px] text-slate-500 truncate max-w-[200px]">pinnacleiit-softwareengineer-priyanshu-kumar.md</span>
+            <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/experiences/pinnacleiit-softwareengineer-priyanshu-kumar.md" target="_blank" rel="noopener noreferrer" 
+               class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+              <span>View Source</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+        
+        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card"
+                 data-company-slug="shipturtle"
+                 data-role-slug="backend-developer"
+                 data-difficulties="medium"
+                 data-topics="sql-queries react"
+                 data-search="shipturtle backend developer harsh ## technical round (direct, no aptitude) — medium
+frontend-leaning for a backend role: given a react code snippet using state, asked to find the bug and fix it; asked to trace render flow (would it print or not, and why); basic sql queries sql-queries react">
+          <div>
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <a href="companies/shipturtle.html" class="group/title flex items-center gap-1.5">
+                  <h3 class="text-xl font-bold text-white tracking-tight group-hover/title:text-emerald-400 transition-colors">ShipTurtle</h3>
+                  <svg class="w-4 h-4 text-slate-500 opacity-0 group-hover/title:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                <div class="text-xs sm:text-sm font-medium text-emerald-400 mt-0.5">Backend Developer</div>
+              </div>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 border border-slate-700">Status: Unknown</span>
+                <span class="text-[11px] text-slate-500 font-mono">Batch 2026</span>
+              </div>
+            </div>
+
+            <!-- Contributor & Metadata -->
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06]">
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                @harsh
+              </span>
+              <span>•</span>
+              <span class="text-slate-400">1 Round</span>
+            </div>
+
+            <!-- Round Cards Breakdown -->
+            <div class="space-y-3.5">
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/aptitude-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Technical Round (direct, no aptitude)
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Frontend-leaning for a backend role: given a React code snippet using state, asked to find the bug and fix it; asked to trace render flow (would it print or not, and why); basic SQL queries
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/sql-queries.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #sql-queries
+                        </a>
+                      
+                        <a href="topics/react.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #react
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500">
+            <span class="font-mono text-[11px] text-slate-500 truncate max-w-[200px]">shipturtle-backend-harsh.md</span>
+            <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/experiences/shipturtle-backend-harsh.md" target="_blank" rel="noopener noreferrer" 
+               class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+              <span>View Source</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+        
+        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card"
+                 data-company-slug="simform"
+                 data-role-slug="aiml-developer"
+                 data-difficulties="easy medium medium n/a"
+                 data-topics="reasoning time-complexity dsa-array palindrome supervised-unsupervised-learning deep-learning generative-ai hr-scenario-based"
+                 data-search="simform ai/ml developer harsh ## aptitude round — easy
+reasoning-level (series completion, etc.), plus some technical questions on time complexity (e.g. complexity of graph traversal)
+
+## practical round — easy-medium
+3 questions: palindrome check, print area of a circle, and two problem-solving array questions (no heavy coding required)
+
+## technical round — medium
+started with self-introduction, went deep into ml fundamentals: supervised vs unsupervised learning, deep learning, generative ai, why this role
+
+## hr / culture fit round — n/a
+self-introduction, about the company, scenario-based (e.g. handling too many tasks, communicating with a client) reasoning time-complexity dsa-array palindrome supervised-unsupervised-learning deep-learning generative-ai hr-scenario-based">
+          <div>
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <a href="companies/simform.html" class="group/title flex items-center gap-1.5">
+                  <h3 class="text-xl font-bold text-white tracking-tight group-hover/title:text-emerald-400 transition-colors">Simform</h3>
+                  <svg class="w-4 h-4 text-slate-500 opacity-0 group-hover/title:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                <div class="text-xs sm:text-sm font-medium text-emerald-400 mt-0.5">AI/ML Developer</div>
+              </div>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-300 border border-emerald-800"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Selected</span>
+                <span class="text-[11px] text-slate-500 font-mono">Batch 2026</span>
+              </div>
+            </div>
+
+            <!-- Contributor & Metadata -->
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06]">
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                @harsh
+              </span>
+              <span>•</span>
+              <span class="text-slate-400">4 Rounds</span>
+            </div>
+
+            <!-- Round Cards Breakdown -->
+            <div class="space-y-3.5">
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/aptitude-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Aptitude Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-950/80 text-emerald-300 border border-emerald-800/80">Easy</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Reasoning-level (series completion, etc.), plus some technical questions on time complexity (e.g. complexity of graph traversal)
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/reasoning.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #reasoning
+                        </a>
+                      
+                        <a href="topics/time-complexity.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #time-complexity
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/practical-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Practical Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Easy-Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    3 questions: palindrome check, print area of a circle, and two problem-solving array questions (no heavy coding required)
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/dsa-array.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #dsa-array
+                        </a>
+                      
+                        <a href="topics/palindrome.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #palindrome
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/technical-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Technical Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Started with self-introduction, went deep into ML fundamentals: supervised vs unsupervised learning, deep learning, generative AI, why this role
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/supervised-unsupervised-learning.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #supervised-unsupervised-learning
+                        </a>
+                      
+                        <a href="topics/deep-learning.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #deep-learning
+                        </a>
+                      
+                        <a href="topics/generative-ai.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #generative-ai
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/hr-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      HR / Culture Fit Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">N/A</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Self-introduction, about the company, scenario-based (e.g. handling too many tasks, communicating with a client)
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/hr-scenario-based.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #hr-scenario-based
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500">
+            <span class="font-mono text-[11px] text-slate-500 truncate max-w-[200px]">simform-aiml-harsh.md</span>
+            <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/experiences/simform-aiml-harsh.md" target="_blank" rel="noopener noreferrer" 
+               class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+              <span>View Source</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+        
+        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card"
+                 data-company-slug="streebo"
+                 data-role-slug="backend-developer"
+                 data-difficulties="medium medium"
+                 data-topics="number-system work-and-time percentage reasoning data-interpretation c-fundamentals oop-concepts palindrome"
+                 data-search="streebo backend developer harsh ## aptitude round — medium
+3 parts: (1) quant aptitude — number system, work and time, percentage; (2) reasoning; (3) data interpretation
+
+## technical round — easy-medium
+palindrome check, basic oop fundamentals, basic c, self-introduction number-system work-and-time percentage reasoning data-interpretation c-fundamentals oop-concepts palindrome">
+          <div>
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <a href="companies/streebo.html" class="group/title flex items-center gap-1.5">
+                  <h3 class="text-xl font-bold text-white tracking-tight group-hover/title:text-emerald-400 transition-colors">Streebo</h3>
+                  <svg class="w-4 h-4 text-slate-500 opacity-0 group-hover/title:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                <div class="text-xs sm:text-sm font-medium text-emerald-400 mt-0.5">Backend Developer</div>
+              </div>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 border border-slate-700">Status: Unknown</span>
+                <span class="text-[11px] text-slate-500 font-mono">Batch 2026</span>
+              </div>
+            </div>
+
+            <!-- Contributor & Metadata -->
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06]">
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                @harsh
+              </span>
+              <span>•</span>
+              <span class="text-slate-400">2 Rounds</span>
+            </div>
+
+            <!-- Round Cards Breakdown -->
+            <div class="space-y-3.5">
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/aptitude-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Aptitude Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    3 parts: (1) quant aptitude — number system, work and time, percentage; (2) reasoning; (3) data interpretation
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/number-system.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #number-system
+                        </a>
+                      
+                        <a href="topics/work-and-time.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #work-and-time
+                        </a>
+                      
+                        <a href="topics/percentage.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #percentage
+                        </a>
+                      
+                        <a href="topics/reasoning.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #reasoning
+                        </a>
+                      
+                        <a href="topics/data-interpretation.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #data-interpretation
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/technical-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Technical Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Easy-Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Palindrome check, basic OOP fundamentals, basic C, self-introduction
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/c-fundamentals.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #c-fundamentals
+                        </a>
+                      
+                        <a href="topics/oop-concepts.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #oop-concepts
+                        </a>
+                      
+                        <a href="topics/palindrome.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #palindrome
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500">
+            <span class="font-mono text-[11px] text-slate-500 truncate max-w-[200px]">streebo-backend-harsh.md</span>
+            <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/experiences/streebo-backend-harsh.md" target="_blank" rel="noopener noreferrer" 
+               class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+              <span>View Source</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+        
+        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card"
+                 data-company-slug="synoverge"
+                 data-role-slug="junior-software-developer"
+                 data-difficulties="medium n/a n/a"
+                 data-topics="reasoning data-interpretation essay-writing"
+                 data-search="synoverge junior software developer harsh ## aptitude round — easy-medium
+simple aptitude, medium reasoning, data interpretation
+
+## technical round — n/a
+[details not captured — add if you recall anything specific]
+
+## essay writing round — n/a
+one essay writing question [topic not specified] reasoning data-interpretation essay-writing">
+          <div>
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <a href="companies/synoverge.html" class="group/title flex items-center gap-1.5">
+                  <h3 class="text-xl font-bold text-white tracking-tight group-hover/title:text-emerald-400 transition-colors">Synoverge</h3>
+                  <svg class="w-4 h-4 text-slate-500 opacity-0 group-hover/title:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                <div class="text-xs sm:text-sm font-medium text-emerald-400 mt-0.5">Junior Software Developer</div>
+              </div>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 border border-slate-700">Status: Unknown</span>
+                <span class="text-[11px] text-slate-500 font-mono">Batch 2026</span>
+              </div>
+            </div>
+
+            <!-- Contributor & Metadata -->
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06]">
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                @harsh
+              </span>
+              <span>•</span>
+              <span class="text-slate-400">3 Rounds</span>
+            </div>
+
+            <!-- Round Cards Breakdown -->
+            <div class="space-y-3.5">
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/aptitude-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Aptitude Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Easy-Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Simple aptitude, medium reasoning, data interpretation
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/reasoning.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #reasoning
+                        </a>
+                      
+                        <a href="topics/data-interpretation.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #data-interpretation
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/technical-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Technical Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">N/A</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    [details not captured — add if you recall anything specific]
+                  </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/essay-writing-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Essay Writing Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">N/A</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    One essay writing question [topic not specified]
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/essay-writing.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #essay-writing
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500">
+            <span class="font-mono text-[11px] text-slate-500 truncate max-w-[200px]">synoverge-juniorswdev-harsh.md</span>
+            <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/experiences/synoverge-juniorswdev-harsh.md" target="_blank" rel="noopener noreferrer" 
+               class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+              <span>View Source</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+        
+        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card"
+                 data-company-slug="tcs"
+                 data-role-slug="backend-developer"
+                 data-difficulties="medium medium"
+                 data-topics="number-system work-and-time percentage profit-loss reasoning clock calendar directions seating-arrangement train-speed-distance english-synonyms-antonyms essay-writing oop-concepts resume-based"
+                 data-search="tcs backend developer nehang ## aptitude round — medium
+quants: work and time, train and distance, number system, percentage, profit-loss
+advanced quants: reasoning, clock, directions, seating arrangement, calendar
+english: sentence simplification, synonyms/antonyms
+essay writing
+coding: water trapping problem
+
+## technical round — medium
+three separate interviewer tracks:
+- ninja track (python-native): merge two lists, self-introduction, basic oop
+- digital track: oop concepts, then data structures
+- prime track: resume-based, articulation/communication-focused number-system work-and-time percentage profit-loss reasoning clock calendar directions seating-arrangement train-speed-distance english-synonyms-antonyms essay-writing oop-concepts resume-based">
+          <div>
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <a href="companies/tcs.html" class="group/title flex items-center gap-1.5">
+                  <h3 class="text-xl font-bold text-white tracking-tight group-hover/title:text-emerald-400 transition-colors">TCS</h3>
+                  <svg class="w-4 h-4 text-slate-500 opacity-0 group-hover/title:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+                <div class="text-xs sm:text-sm font-medium text-emerald-400 mt-0.5">Backend Developer</div>
+              </div>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 border border-slate-700">Status: Unknown</span>
+                <span class="text-[11px] text-slate-500 font-mono">Batch 2026</span>
+              </div>
+            </div>
+
+            <!-- Contributor & Metadata -->
+            <div class="flex items-center gap-2 text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06]">
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                @nehang
+              </span>
+              <span>•</span>
+              <span class="text-slate-400">2 Rounds</span>
+            </div>
+
+            <!-- Round Cards Breakdown -->
+            <div class="space-y-3.5">
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/aptitude-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Aptitude Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Quants: work and time, train and distance, number system, percentage, profit-loss<br/>Advanced quants: reasoning, clock, directions, seating arrangement, calendar<br/>English: sentence simplification, synonyms/antonyms<br/>Essay writing<br/>Coding: water trapping problem
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/number-system.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #number-system
+                        </a>
+                      
+                        <a href="topics/work-and-time.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #work-and-time
+                        </a>
+                      
+                        <a href="topics/percentage.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #percentage
+                        </a>
+                      
+                        <a href="topics/profit-loss.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #profit-loss
+                        </a>
+                      
+                        <a href="topics/reasoning.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #reasoning
+                        </a>
+                      
+                        <a href="topics/clock.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #clock
+                        </a>
+                      
+                        <a href="topics/calendar.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #calendar
+                        </a>
+                      
+                        <a href="topics/directions.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #directions
+                        </a>
+                      
+                        <a href="topics/seating-arrangement.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #seating-arrangement
+                        </a>
+                      
+                        <a href="topics/train-speed-distance.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #train-speed-distance
+                        </a>
+                      
+                        <a href="topics/english-synonyms-antonyms.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #english-synonyms-antonyms
+                        </a>
+                      
+                        <a href="topics/essay-writing.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #essay-writing
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <a href="rounds/technical-round.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                      Technical Round
+                      <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-950/80 text-amber-300 border border-amber-800/80">Medium</span>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed font-sans">
+                    Three separate interviewer tracks:<br/><li class="ml-4 list-disc text-slate-300 text-xs sm:text-sm mb-1 leading-relaxed">Ninja track (Python-native): merge two lists, self-introduction, basic OOP</li><br/><li class="ml-4 list-disc text-slate-300 text-xs sm:text-sm mb-1 leading-relaxed">Digital track: OOP concepts, then data structures</li><br/><li class="ml-4 list-disc text-slate-300 text-xs sm:text-sm mb-1 leading-relaxed">Prime track: resume-based, articulation/communication-focused</li>
+                  </div>
+                  
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
+                      
+                        <a href="topics/oop-concepts.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #oop-concepts
+                        </a>
+                      
+                        <a href="topics/resume-based.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                          #resume-based
+                        </a>
+                      
+                    </div>
+                  
+                </div>
+              
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500">
+            <span class="font-mono text-[11px] text-slate-500 truncate max-w-[200px]">tcs-backend-nehang.md</span>
+            <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/experiences/tcs-backend-nehang.md" target="_blank" rel="noopener noreferrer" 
+               class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+              <span>View Source</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </article>
+        
+    </div>
+
+    <!-- Empty State -->
+    <div id="noResults" class="hidden glass-panel rounded-2xl p-12 text-center my-8">
+      <div class="w-12 h-12 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center mx-auto mb-3 text-slate-400">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      </div>
+      <h3 class="text-base font-semibold text-white mb-1">No matching experiences found</h3>
+      <p class="text-xs text-slate-400 mb-4">Try clearing filters or searching for different keywords.</p>
+      <button onclick="resetFilters()" class="px-4 py-2 rounded-xl bg-emerald-500 text-slate-950 text-xs font-semibold hover:bg-emerald-400 transition-colors">Reset All Filters</button>
+    </div>
+  </main>
+
+  <script>
+    // Embedded Data for Instant Client-Side Charts & Filtering
+    const companyStats = {"Armakuni":1,"Cyperrox":1,"Meditab":1,"Optimumbrew":1,"Pinnacle IIT":1,"ShipTurtle":1,"Simform":1,"Streebo":1,"Synoverge":1,"TCS":1};
+    const roundStats = {"Aptitude Round":10,"Practical Round":4,"Group Discussion":1,"Technical Round":7,"HR Round":3,"Essay Writing Round":1};
+
+    // Initialize Chart.js
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Company Bar Chart
+      const ctxCompany = document.getElementById('companyBarChart');
+      if (ctxCompany) {
+        new Chart(ctxCompany, {
+          type: 'bar',
+          data: {
+            labels: Object.keys(companyStats),
+            datasets: [{
+              label: 'Experiences',
+              data: Object.values(companyStats),
+              backgroundColor: 'rgba(16, 185, 129, 0.75)',
+              borderColor: 'rgba(52, 211, 153, 1)',
+              borderWidth: 1,
+              borderRadius: 6,
+              hoverBackgroundColor: 'rgba(52, 211, 153, 0.95)'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                titleColor: '#f8fafc',
+                bodyColor: '#34d399',
+                borderColor: 'rgba(255, 255, 255, 0.1)',
+                borderWidth: 1,
+                padding: 10,
+                cornerRadius: 8
+              }
+            },
+            scales: {
+              x: {
+                ticks: { color: '#94a3b8', font: { size: 10, family: 'Inter' } },
+                grid: { display: false }
+              },
+              y: {
+                ticks: { color: '#94a3b8', stepSize: 1, font: { size: 10, family: 'Inter' } },
+                grid: { color: 'rgba(255, 255, 255, 0.05)' }
+              }
+            }
+          }
+        });
+      }
+
+      // 2. Round Donut Chart
+      const ctxRound = document.getElementById('roundDonutChart');
+      if (ctxRound) {
+        new Chart(ctxRound, {
+          type: 'doughnut',
+          data: {
+            labels: Object.keys(roundStats),
+            datasets: [{
+              data: Object.values(roundStats),
+              backgroundColor: [
+                '#10b981',
+                '#06b6d4',
+                '#3b82f6',
+                '#8b5cf6',
+                '#f59e0b',
+                '#ec4899',
+                '#64748b'
+              ],
+              borderColor: '#07090e',
+              borderWidth: 2,
+              hoverOffset: 4
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'bottom',
+                labels: {
+                  color: '#94a3b8',
+                  font: { size: 10, family: 'Inter' },
+                  boxWidth: 10,
+                  padding: 10
+                }
+              },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                titleColor: '#f8fafc',
+                borderColor: 'rgba(255, 255, 255, 0.1)',
+                borderWidth: 1,
+                padding: 10,
+                cornerRadius: 8
+              }
+            },
+            cutout: '70%'
+          }
+        });
+      }
+    });
+
+    // Client-side filtering logic
+    const searchInput = document.getElementById('liveSearchInput');
+    const compSelect = document.getElementById('filterCompanySelect');
+    const roleSelect = document.getElementById('filterRoleSelect');
+    const diffSelect = document.getElementById('filterDiffSelect');
+    const topicSelect = document.getElementById('filterTopicSelect');
+    const cards = document.querySelectorAll('.exp-card');
+    const resultsBadge = document.getElementById('resultsBadge');
+    const resetBtn = document.getElementById('resetBtn');
+    const noResults = document.getElementById('noResults');
+
+    function applyLiveFilters() {
+      const q = searchInput.value.toLowerCase().trim();
+      const comp = compSelect.value;
+      const role = roleSelect.value;
+      const diff = diffSelect.value.toLowerCase();
+      const topic = topicSelect.value;
+
+      let visible = 0;
+      const isFiltered = (q !== '' || comp !== 'all' || role !== 'all' || diff !== 'all' || topic !== 'all');
+
+      if (isFiltered) {
+        resetBtn.classList.remove('hidden');
+      } else {
+        resetBtn.classList.add('hidden');
+      }
+
+      cards.forEach(card => {
+        const cardComp = card.getAttribute('data-company-slug');
+        const cardRole = card.getAttribute('data-role-slug');
+        const cardDiffs = card.getAttribute('data-difficulties');
+        const cardTopics = card.getAttribute('data-topics').split(' ');
+        const cardSearch = card.getAttribute('data-search');
+
+        const matchComp = (comp === 'all' || cardComp === comp);
+        const matchRole = (role === 'all' || cardRole === role);
+        const matchDiff = (diff === 'all' || cardDiffs.includes(diff));
+        const matchTopic = (topic === 'all' || cardTopics.includes(topic));
+        const matchSearch = (!q || cardSearch.includes(q));
+
+        if (matchComp && matchRole && matchDiff && matchTopic && matchSearch) {
+          card.style.display = 'flex';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      resultsBadge.innerText = 'Showing ' + visible + ' of ' + cards.length;
+
+      if (visible === 0) {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+    }
+
+    function setTopicFilter(t) {
+      topicSelect.value = t;
+      applyLiveFilters();
+    }
+
+    function resetFilters() {
+      searchInput.value = '';
+      compSelect.value = 'all';
+      roleSelect.value = 'all';
+      diffSelect.value = 'all';
+      topicSelect.value = 'all';
+      applyLiveFilters();
+    }
+
+    searchInput.addEventListener('input', applyLiveFilters);
+    compSelect.addEventListener('change', applyLiveFilters);
+    roleSelect.addEventListener('change', applyLiveFilters);
+    diffSelect.addEventListener('change', applyLiveFilters);
+    topicSelect.addEventListener('change', applyLiveFilters);
+  </script>
+  
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/[0.08] bg-[#05070a] py-12 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-4">
+      <div class="flex items-center justify-center gap-2">
+        <div class="w-5 h-5 rounded bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px]">MU</div>
+        <span class="font-semibold text-slate-300">Marwadi University On-Campus Placement Archive</span>
+      </div>
+      <p class="text-slate-400 max-w-lg mx-auto leading-relaxed">
+        Built by students for students. First-hand on-campus interview questions, patterns, and tips.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-slate-400 pt-2 font-medium">
+        <a href="index.html" class="hover:text-emerald-400 transition-colors">Home</a>
+        <span>•</span>
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-" class="hover:text-emerald-400 transition-colors">Repository</a>
+        <span>•</span>
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/CONTRIBUTING.md" class="hover:text-emerald-400 transition-colors">Submit Experience</a>
+        <span>•</span>
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/taxonomy.md" class="hover:text-emerald-400 transition-colors">Canonical Taxonomy</a>
+        <span>•</span>
+        <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/LICENSE" class="hover:text-emerald-400 transition-colors">MIT License</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

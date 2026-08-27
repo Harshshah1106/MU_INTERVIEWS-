@@ -1,0 +1,83 @@
+name: "Interview Experience"
+description: "Submit an on-campus interview experience"
+title: "[Experience]: <Company> - <Role>"
+labels: ["experience"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🎓 Share Your Interview Experience
+        Thank you for contributing! Please check [`taxonomy.md`](https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/taxonomy.md) for existing company and role spellings to help keep submissions consistent across the archive.
+
+  - type: input
+    id: company
+    attributes:
+      label: "Company name"
+      placeholder: "e.g., Meditab, TCS, Simform"
+    validations:
+      required: true
+
+  - type: input
+    id: role
+    attributes:
+      label: "Role applied for"
+      placeholder: "e.g., Backend Developer, QA, Software Engineer, AI/ML Developer"
+    validations:
+      required: true
+
+  - type: textarea
+    id: aptitude_round
+    attributes:
+      label: "Aptitude Round details"
+      description: "Topics, difficulty level, types of questions asked (e.g. Quants, Reasoning, MCQs)"
+      placeholder: "e.g. Work and time, percentages, number system, basic C fundamentals..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical_round
+    attributes:
+      label: "Technical Round details"
+      description: "Questions asked, topics tested, coding challenges, difficulty level"
+      placeholder: "e.g. DSA questions, SQL queries, OOP concepts, language fundamentals..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: practical_round
+    attributes:
+      label: "Practical Round details"
+      description: "Practical coding tasks, machine tests, assignments, or system design"
+      placeholder: "e.g. Writing test cases, live problem solving..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: gd_round
+    attributes:
+      label: "Group Discussion details"
+      description: "GD topic, group size, discussion duration, format"
+      placeholder: "e.g. GD topic given, format, key points..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: hr_round
+    attributes:
+      label: "HR Round details"
+      description: "Questions asked in HR / Culture fit round"
+      placeholder: "e.g. Self introduction, why this company/role, scenario-based questions..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: "Outcome"
+      options:
+        - "Selected"
+        - "Rejected"
+        - "Withdrew"
+        - "Reached this round, outcome unknown"
+    validations:
+      required: true
