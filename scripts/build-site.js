@@ -222,13 +222,13 @@ function getDifficultyBadge(diff) {
 function getStatusBadge(status, rounds = []) {
   const s = (status || '').toLowerCase();
   if (s === 'selected') {
-    return `<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-950/90 text-emerald-300 border border-emerald-700/80 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Selected</span>`;
+    return `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-600/80 shadow-sm shadow-emerald-900/40"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>Selected</span>`;
   }
   if (s === 'withdrew') {
-    return `<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-950/90 text-amber-300 border border-amber-700/80 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Withdrew</span>`;
+    return `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-amber-950 text-amber-300 border border-amber-600/80 shadow-sm shadow-amber-900/40"><span class="w-2 h-2 rounded-full bg-amber-400"></span>Withdrew</span>`;
   }
   if (s === 'rejected') {
-    return `<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-rose-950/90 text-rose-300 border border-rose-700/80 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>Rejected</span>`;
+    return `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-rose-950 text-rose-300 border border-rose-600/80 shadow-sm shadow-rose-900/40"><span class="w-2 h-2 rounded-full bg-rose-400"></span>Rejected</span>`;
   }
 
   // When status is unknown or unspecified, show the last attended/documented round
@@ -236,10 +236,10 @@ function getStatusBadge(status, rounds = []) {
     const lastRound = rounds[rounds.length - 1];
     // Clean up round title if it contains extra parenthetical details
     const cleanTitle = lastRound.title.split('(')[0].trim();
-    return `<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-900/90 text-cyan-300 border border-cyan-700/60 shadow-sm" title="Last documented stage"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>Till ${cleanTitle}</span>`;
+    return `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-cyan-950/90 text-cyan-300 border border-cyan-500/70 shadow-sm shadow-cyan-950/50" title="Last documented interview stage"><span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>Till ${cleanTitle}</span>`;
   }
 
-  return `<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-800/90 text-slate-300 border border-slate-700">Outcome Unknown</span>`;
+  return `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700">Outcome Unknown</span>`;
 }
 
 function renderMarkdownToHtml(md, rootPrefix = '') {
@@ -260,6 +260,9 @@ function renderPageShell({ title, description, content, rootPrefix = '', activeN
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>${title} | MU_INTERVIEWS</title>
   <meta name="description" content="${description}" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -295,27 +298,27 @@ function renderPageShell({ title, description, content, rootPrefix = '', activeN
       letter-spacing: -0.01em;
     }
     .glass-panel {
-      background: rgba(13, 17, 28, 0.7);
+      background: rgba(13, 17, 28, 0.75);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.3);
     }
     .glass-card {
-      background: rgba(15, 21, 37, 0.6);
+      background: rgba(15, 21, 37, 0.65);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .glass-card:hover {
-      background: rgba(20, 28, 48, 0.85);
-      border-color: rgba(52, 211, 153, 0.4);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.15);
+      background: rgba(22, 31, 54, 0.9);
+      border-color: rgba(52, 211, 153, 0.45);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px -10px rgba(16, 185, 129, 0.2);
     }
     .glow-header {
-      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.18), transparent 70%);
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.2), transparent 70%);
     }
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
@@ -488,7 +491,7 @@ function build() {
       <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">Interview Experiences</span>
     </h1>
     <p class="max-w-2xl mx-auto text-sm sm:text-base text-slate-400 mb-10 leading-relaxed font-normal">
-      High-yield archive of actual aptitude questions, technical rounds, coding tasks, and HR interviews experienced by Marwadi University students. Click any card to explore company blueprints.
+      High-yield archive of actual aptitude questions, technical rounds, coding tasks, and HR interviews experienced by Marwadi University students. Tap any card below to deep dive into company patterns.
     </p>
 
     <!-- Top Key Metrics Strip -->
@@ -621,33 +624,32 @@ function build() {
         const diffCategories = exp.rounds.map(r => r.difficultyNormalized.toLowerCase()).join(' ');
         const topicsString = exp.topics.join(' ');
         return `
-        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card cursor-pointer group hover:border-emerald-500/40 relative"
-                 onclick="if (!event.target.closest('a') && !event.target.closest('button')) window.location.href='companies/${exp.companySlug}.html'"
+        <article class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between exp-card group relative cursor-pointer"
+                 onclick="navigateToCompany(event, './companies/${exp.companySlug}.html')"
                  data-company-slug="${exp.companySlug}"
                  data-role-slug="${exp.roleSlug}"
                  data-difficulties="${diffCategories}"
                  data-topics="${topicsString}"
                  data-search="${(exp.company + ' ' + exp.role + ' ' + exp.contributor + ' ' + exp.rawBody + ' ' + topicsString).toLowerCase().replace(/"/g, '&quot;')}">
+          
           <div>
             <!-- Header -->
             <div class="flex items-start justify-between gap-3 mb-3">
               <div>
-                <div class="flex items-center gap-2">
-                  <a href="companies/${exp.companySlug}.html" class="text-xl font-bold text-white tracking-tight group-hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5">
-                    <span>${exp.company}</span>
-                    <svg class="w-4 h-4 text-emerald-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                  </a>
-                </div>
+                <a href="./companies/${exp.companySlug}.html" class="text-xl font-bold text-white tracking-tight group-hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5 z-10 relative">
+                  <span>${exp.company}</span>
+                  <svg class="w-4 h-4 text-emerald-400 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
                 <div class="text-xs sm:text-sm font-medium text-emerald-400 mt-0.5">${exp.role}</div>
               </div>
-              <div class="flex flex-col items-end gap-1.5">
+              <div class="flex flex-col items-end gap-1.5 z-10 relative">
                 ${getStatusBadge(exp.status, exp.rounds)}
                 <span class="text-[11px] text-slate-500 font-mono">Batch ${exp.year}</span>
               </div>
             </div>
 
             <!-- Contributor & Metadata -->
-            <div class="flex items-center justify-between text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06]">
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-5 pb-4 border-b border-white/[0.06] z-10 relative">
               <div class="flex items-center gap-2">
                 <span class="inline-flex items-center gap-1">
                   <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
@@ -656,17 +658,17 @@ function build() {
                 <span>•</span>
                 <span class="text-slate-400">${exp.rounds.length} ${exp.rounds.length === 1 ? 'Round' : 'Rounds'}</span>
               </div>
-              <span class="text-[11px] font-medium text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:inline-flex items-center gap-0.5">
-                Deep Dive ↗
+              <span class="text-[11px] font-semibold text-emerald-400 group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
+                Explore Blueprint →
               </span>
             </div>
 
             <!-- Round Cards Breakdown -->
-            <div class="space-y-3.5">
+            <div class="space-y-3.5 z-10 relative">
               ${exp.rounds.map(r => `
-                <div class="bg-slate-900/70 rounded-xl p-3.5 border border-white/[0.06]">
+                <div class="bg-slate-900/80 rounded-xl p-3.5 border border-white/[0.06] hover:border-white/10 transition-colors">
                   <div class="flex items-center justify-between gap-2 mb-2">
-                    <a href="rounds/${r.typeSlug}.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                    <a href="./rounds/${r.typeSlug}.html" class="text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
                       ${r.title}
                       <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </a>
@@ -678,7 +680,7 @@ function build() {
                   ${r.topics.length > 0 ? `
                     <div class="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/[0.04]">
                       ${r.topics.map(t => `
-                        <a href="topics/${t}.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
+                        <a href="./topics/${t}.html" class="px-1.5 py-0.5 rounded bg-slate-950 text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-white/5 text-[10px] font-mono transition-colors">
                           #${t}
                         </a>
                       `).join('')}
@@ -690,7 +692,7 @@ function build() {
           </div>
 
           <!-- Card Footer -->
-          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500">
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-500 z-10 relative">
             <span class="font-mono text-[11px] text-slate-500 truncate max-w-[200px]">${exp.filename}</span>
             <a href="https://github.com/Harshshah1106/MU_INTERVIEWS-/blob/main/experiences/${exp.filename}" target="_blank" rel="noopener noreferrer" 
                class="text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
@@ -718,6 +720,14 @@ function build() {
     // Embedded Data for Instant Client-Side Charts & Filtering
     const companyStats = ${JSON.stringify(companyCounts)};
     const roundStats = ${JSON.stringify(roundCounts)};
+
+    function navigateToCompany(e, url) {
+      // If user clicked directly on a link or button, let that action happen
+      if (e.target.closest('a') || e.target.closest('button')) {
+        return;
+      }
+      window.location.href = url;
+    }
 
     // Initialize Chart.js
     document.addEventListener('DOMContentLoaded', () => {
@@ -901,7 +911,7 @@ function build() {
     title: 'MU_INTERVIEWS — On-Campus Placement Archive',
     description: 'Archive of real on-campus interview questions, tests, and tips from Marwadi University.',
     content: indexContent,
-    rootPrefix: '',
+    rootPrefix: './',
     activeNav: 'home'
   });
 
@@ -1077,25 +1087,27 @@ function build() {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         ${matchingEntries.map(item => `
           <div class="glass-card rounded-2xl p-5 flex flex-col justify-between cursor-pointer group hover:border-emerald-500/40"
-               onclick="if (!event.target.closest('a') && !event.target.closest('button')) window.location.href='../companies/${item.experience.companySlug}.html'">
+               onclick="navigateToCompany(event, '../companies/${item.experience.companySlug}.html')">
             <div>
               <div class="flex items-center justify-between mb-3">
                 <div>
-                  <a href="../companies/${item.experience.companySlug}.html" class="text-base font-bold text-white group-hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                  <a href="../companies/${item.experience.companySlug}.html" class="text-base font-bold text-white group-hover:text-emerald-400 transition-colors inline-flex items-center gap-1 z-10 relative">
                     <span>${item.experience.company}</span>
-                    <svg class="w-3.5 h-3.5 text-emerald-400 opacity-60 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <svg class="w-3.5 h-3.5 text-emerald-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                   </a>
                   <div class="text-xs text-emerald-400 font-medium">${item.experience.role}</div>
                 </div>
-                ${getDifficultyBadge(item.round.difficulty)}
+                <div class="z-10 relative">
+                  ${getDifficultyBadge(item.round.difficulty)}
+                </div>
               </div>
 
-              <div class="bg-slate-900/80 rounded-xl p-3.5 border border-white/5 text-xs text-slate-300 leading-relaxed">
+              <div class="bg-slate-900/80 rounded-xl p-3.5 border border-white/5 text-xs text-slate-300 leading-relaxed z-10 relative">
                 ${renderMarkdownToHtml(item.round.details, '../')}
               </div>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-white/[0.06] flex items-center justify-between text-[11px] text-slate-500">
+            <div class="mt-4 pt-3 border-t border-white/[0.06] flex items-center justify-between text-[11px] text-slate-500 z-10 relative">
               <span>Contributor: @${item.experience.contributor}</span>
               <a href="../companies/${item.experience.companySlug}.html" class="text-emerald-400 hover:text-emerald-300 font-medium">Company Profile →</a>
             </div>
@@ -1175,25 +1187,27 @@ function build() {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         ${topicOccurrences.map(item => `
           <div class="glass-card rounded-2xl p-5 flex flex-col justify-between cursor-pointer group hover:border-emerald-500/40"
-               onclick="if (!event.target.closest('a') && !event.target.closest('button')) window.location.href='../companies/${item.experience.companySlug}.html'">
+               onclick="navigateToCompany(event, '../companies/${item.experience.companySlug}.html')">
             <div>
               <div class="flex items-center justify-between mb-3">
                 <div>
-                  <a href="../companies/${item.experience.companySlug}.html" class="text-base font-bold text-white group-hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                  <a href="../companies/${item.experience.companySlug}.html" class="text-base font-bold text-white group-hover:text-emerald-400 transition-colors inline-flex items-center gap-1 z-10 relative">
                     <span>${item.experience.company}</span>
-                    <svg class="w-3.5 h-3.5 text-emerald-400 opacity-60 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <svg class="w-3.5 h-3.5 text-emerald-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                   </a>
                   <div class="text-xs text-emerald-400 font-medium">${item.round.title}</div>
                 </div>
-                ${getDifficultyBadge(item.round.difficulty)}
+                <div class="z-10 relative">
+                  ${getDifficultyBadge(item.round.difficulty)}
+                </div>
               </div>
 
-              <div class="bg-slate-900/80 rounded-xl p-3.5 border border-white/5 text-xs text-slate-300 leading-relaxed">
+              <div class="bg-slate-900/80 rounded-xl p-3.5 border border-white/5 text-xs text-slate-300 leading-relaxed z-10 relative">
                 ${renderMarkdownToHtml(item.round.details, '../')}
               </div>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-white/[0.06] flex items-center justify-between text-[11px] text-slate-500">
+            <div class="mt-4 pt-3 border-t border-white/[0.06] flex items-center justify-between text-[11px] text-slate-500 z-10 relative">
               <span>Contributor: @${item.experience.contributor}</span>
               <a href="../companies/${item.experience.companySlug}.html" class="text-emerald-400 hover:text-emerald-300 font-medium">Company Profile →</a>
             </div>

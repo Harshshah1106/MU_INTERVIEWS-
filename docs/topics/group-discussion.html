@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>group-discussion Interview Questions | MU_INTERVIEWS</title>
   <meta name="description" content="Campus interview questions on group-discussion at Marwadi University." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,27 +41,27 @@
       letter-spacing: -0.01em;
     }
     .glass-panel {
-      background: rgba(13, 17, 28, 0.7);
+      background: rgba(13, 17, 28, 0.75);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.3);
     }
     .glass-card {
-      background: rgba(15, 21, 37, 0.6);
+      background: rgba(15, 21, 37, 0.65);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .glass-card:hover {
-      background: rgba(20, 28, 48, 0.85);
-      border-color: rgba(52, 211, 153, 0.4);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.15);
+      background: rgba(22, 31, 54, 0.9);
+      border-color: rgba(52, 211, 153, 0.45);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px -10px rgba(16, 185, 129, 0.2);
     }
     .glow-header {
-      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.18), transparent 70%);
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.2), transparent 70%);
     }
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
@@ -152,25 +155,27 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
           <div class="glass-card rounded-2xl p-5 flex flex-col justify-between cursor-pointer group hover:border-emerald-500/40"
-               onclick="if (!event.target.closest('a') && !event.target.closest('button')) window.location.href='../companies/armakuni.html'">
+               onclick="navigateToCompany(event, '../companies/armakuni.html')">
             <div>
               <div class="flex items-center justify-between mb-3">
                 <div>
-                  <a href="../companies/armakuni.html" class="text-base font-bold text-white group-hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+                  <a href="../companies/armakuni.html" class="text-base font-bold text-white group-hover:text-emerald-400 transition-colors inline-flex items-center gap-1 z-10 relative">
                     <span>Armakuni</span>
-                    <svg class="w-3.5 h-3.5 text-emerald-400 opacity-60 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <svg class="w-3.5 h-3.5 text-emerald-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                   </a>
                   <div class="text-xs text-emerald-400 font-medium">Group Discussion</div>
                 </div>
-                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">N/A</span>
+                <div class="z-10 relative">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">N/A</span>
+                </div>
               </div>
 
-              <div class="bg-slate-900/80 rounded-xl p-3.5 border border-white/5 text-xs text-slate-300 leading-relaxed">
+              <div class="bg-slate-900/80 rounded-xl p-3.5 border border-white/5 text-xs text-slate-300 leading-relaxed z-10 relative">
                 
               </div>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-white/[0.06] flex items-center justify-between text-[11px] text-slate-500">
+            <div class="mt-4 pt-3 border-t border-white/[0.06] flex items-center justify-between text-[11px] text-slate-500 z-10 relative">
               <span>Contributor: @harsh</span>
               <a href="../companies/armakuni.html" class="text-emerald-400 hover:text-emerald-300 font-medium">Company Profile →</a>
             </div>
